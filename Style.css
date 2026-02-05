@@ -1,0 +1,159 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+ 
+.navbar {
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.nav-logo{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 60px;
+    color: rgb(49, 53, 56);
+}.nav-logo:hover{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
+    transition: 0.3s;
+}
+.nav-flex a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-flex a{
+  position: relative;
+  color: rgb(108, 94, 94);
+}
+
+.nav-flex {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    margin-right: 60px;
+}
+.deskripsi{
+justify-content: space-between;
+
+}
+
+.nav-flex a:hover {
+    color: rgba(255, 255, 255, 1); 
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
+}
+
+.nav-flex a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: rgba(35, 119, 244, 0.8);
+  box-shadow: 0 0 8px rgba(147, 197, 253, 0.8);
+  transition: 0.3s;
+}
+
+.nav-flex a:hover::after {
+  width: 100%;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 80px;
+    background: linear-gradient(
+    -45deg,
+    #f8fafc,
+    #e3e7db,
+    #d6cfdf,
+    #d3d7dd
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.hero-content{
+    max-width: 500px;
+    animation: slideIn 1s ease;
+}
+
+.hero-content span{
+    color:  #1d4ed8;
+    font-weight: bold;
+}
+.container{
+  width: 50%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section{
+    scroll-margin-top: 90px; 
+}
+
+.hero-img {
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 32px 32px 120px 120px;
+  object-fit: cover;
+
+  background: #fff;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translatex(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
