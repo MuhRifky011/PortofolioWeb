@@ -5,11 +5,29 @@
   font-family:Segoe UI, sans-serif;
 }
 
- 
+body{
+  background: radial-gradient(
+    circle at bottom center,
+    rgba(255, 255, 255, 0.35),
+    rgba(245, 244, 244, 0.12) 40%,
+    rgba(255, 255, 255, 0) 75%
+  ),
+    linear-gradient(
+    135deg,
+    #0b1026,
+    #192955,
+    #2563eb
+  );
+
+  min-height: 100vh;
+  background-size: 400% 400%;
+    color: white;
+    scroll-behavior: smooth;
+     
+}
 .navbar {
     display: flex;
-    background-color: transparent;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding: 15px;
     justify-content: space-between;
@@ -18,10 +36,12 @@
     color: black;
 }
 .nav-logo{
-    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-left: 60px;
-    color: rgb(49, 53, 56);
+    color: rgb(255, 255, 255);
 }.nav-logo:hover{
     color: rgba(255, 255, 255, 1);
     text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
@@ -34,8 +54,10 @@
     transition: color 0.3s;
 }
 .nav-flex a{
+  font-size: 1.4rem;
+  margin-left: 4rem;
   position: relative;
-  color: rgb(108, 94, 94);
+  color: rgb(255, 255, 255);
 }
 
 .nav-flex {
@@ -45,7 +67,7 @@
     padding: 0;
     display: flex;
     gap: 25px;
-    margin-right: 60px;
+    margin-right: 120px;
 }
 .deskripsi{
 justify-content: space-between;
@@ -78,60 +100,84 @@ justify-content: space-between;
 
 
 .hero{
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 120px 80px;
-    background: linear-gradient(
-    -45deg,
-    #f8fafc,
-    #e3e7db,
-    #d6cfdf,
-    #d3d7dd
-  );
-  background-size: 400% 400%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 30px;
+  gap: 40px;
   animation: gradientMove 8s ease infinite;
+ 
 }
 
 .hero-content{
+  margin-left: 0 auto;
     max-width: 500px;
     animation: slideIn 1s ease;
+    
 }
-
+.hero-content h2{
+  color: rgb(87, 109, 102);
+  ;
+}
 .hero-content span{
-    color:  #1d4ed8;
+    color:  #115bc2;
     font-weight: bold;
 }
-.container{
-  width: 50%;
-  max-width: 1100px;
-  margin: 0 auto;
+
+.hero-content span:hover{
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
+    transition: 0.3s;
 }
+
+
 .section{
     scroll-margin-top: 90px; 
 }
 
-.hero-img {
-  margin-left: 80px;
-  display: flex;
-  align-items: center;
+.hero-image{
+  margin-left: 0;
+  width: 260px;
+  border-radius: 120px 32px 120px 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero-img img {
-  width: 320px;
-  max-width: 100%;
-  height: auto;
+.Deskripsi{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  justify-content: space-between;
+}
 
-  border-radius: 32px 32px 120px 120px;
-  object-fit: cover;
+.social-icons a{
+  color: #CBD5E1;
+  font-size: 22px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
 
-  background: #fff;
+.social-icons a:hover{
+  color: #60A5FA;
+  transform: translateY(-4px);
+}
 
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.12);
+.tombolProjek{
+  margin-top: 20px;
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: #273148;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px 40px 10px 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.tombolProjek:hover{
+  background-color: #1E40AF;
+  transform: translateY(-4px);
 }
 
 
@@ -145,7 +191,6 @@ justify-content: space-between;
         transform: translateX(0);
     }
 }
-
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
