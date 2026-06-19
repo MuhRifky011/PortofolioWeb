@@ -1,2 +1,2 @@
 # PortofolioWeb
-Portofolio Awal ku
+Portofolio Awal, untuk perkenalan diri
